@@ -1,0 +1,21 @@
+<template name="Image">
+  <figure class="image clickable" data-toggle="modal" data-target="#modal-{{_id}}">
+    <div class="image-container">
+      <img src="{{url}}">
+    </div>
+    <footer class="title">
+      {{title}}
+    </footer>
+  </figure>
+
+  {{#modal}}
+    <figure class="image clickable" data-toggle="modal" data-target="#modal-{{_id}}">
+      <div class="image-container">
+        <img src="{{url}}">
+      </div>
+      <footer class="title">
+        {{title}}
+      </footer>
+    </figure>
+  {{/modal}}
+</template>

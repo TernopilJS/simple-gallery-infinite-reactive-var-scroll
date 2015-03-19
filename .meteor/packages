@@ -11,3 +11,4 @@ twbs:bootstrap
 ternopiljs:core
 ternopiljs:simple-gallery
 reactive-var
+iron:router

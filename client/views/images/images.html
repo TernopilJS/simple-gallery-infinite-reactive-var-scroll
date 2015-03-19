@@ -1,42 +1,13 @@
 <template name="Images">
 
   <div class="simple-gallery container" style="min-height: 10%">
-    <div class="menu">
-      <h1>Simple Gallery</h1>
-      <h2><a href="#" class="category">nature</a></h2>
-      <h2><a href="#" class="category">cats</a></h2>
-      <h2><a href="#" class="category">sports</a></h2>
-      <h2><a href="#" class="category">food</a></h2>
-    </div>
+    {{> Navigation}}
 
-    {{#each images 20}}
+    {{#each images}}
       {{> Image}}
     {{/each}}
 
     <h1><a href="http://facebook.com/michael.rokosh.1">Michael Rokosh</a></h1>
   </div>
   
-</template>
-
-<template name="Image">
-  <figure class="image clickable" data-toggle="modal" data-target="#modal-{{_id}}">
-    <div class="image-container">
-      <img src="{{url}}">
-    </div>
-    <footer class="title">
-      {{title}}
-    </footer>
-  </figure>
-
-  <!-- Modal -->
-  {{#modal}}
-    <figure class="image clickable" data-toggle="modal" data-target="#modal-{{_id}}">
-      <div class="image-container">
-        <img src="{{url}}">
-      </div>
-      <footer class="title">
-        {{title}}
-      </footer>
-    </figure>
-  {{/modal}}
 </template>
