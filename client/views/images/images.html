@@ -7,7 +7,25 @@
       {{> Image}}
     {{/each}}
 
+    {{#with reactiveImage}}
+      {{#modal}}
+        <figure class="image clickable" data-toggle="modal" data-target="#modal-image">
+          <div class="image-container">
+            <img src="{{url}}">
+          </div>
+          <footer class="title">
+            {{title}}
+          </footer>
+        </figure>
+      {{/modal}}
+    {{/with}}
     <h1><a href="http://facebook.com/michael.rokosh.1">Michael Rokosh</a></h1>
   </div>
+  {{#if showButton}}
+    <div class="container load-more-container">
+      <button class='btn btn-default load-more-btn'>Load more</button>
+    </div>
+  {{/if}}
+
   
 </template>

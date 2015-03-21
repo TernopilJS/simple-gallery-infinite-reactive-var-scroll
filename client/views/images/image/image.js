@@ -1,4 +1,7 @@
 Template.Image.events({
+  'click .image': function (e, tmpl) {
+    Session.set('reactiveImage', tmpl.data);
+  }
 });
 
 Template.Image.helpers({

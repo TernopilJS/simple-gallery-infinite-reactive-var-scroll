@@ -1,9 +1,7 @@
-<template name="Navigation">
-  <div class="menu">
-    <h1><a href="{{pathFor route='home'}}">Simple Gallery</a></h1>
-    <h2><a href="{{pathFor route='categoryPage' name='nature' limit='10'}}" class="category">nature</a></h2>
-    <h2><a href="{{pathFor route='categoryPage' name='cats' limit='10'}}" class="category">cats</a></h2>
-    <h2><a href="{{pathFor route='categoryPage' name='sports' limit='10'}}" class="category">sports</a></h2>
-    <h2><a href="{{pathFor route='categoryPage' name='food' limit=10}}" class="category">food</a></h2>
-  </div>
+<template name="Layout">
+  <head>
+    <title>gallery-demo</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" user-scalable="no">
+  </head>
+  {{> yield}}
 </template>
